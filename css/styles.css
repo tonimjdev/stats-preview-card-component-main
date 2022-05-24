@@ -1,0 +1,184 @@
+/* Frontend Mentor Challenge coded by Toni Machado */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Primary */
+  --veryDarkBlue: hsl(233, 47%, 7%); /* Main background */
+  --darkDesaturatedBlue: hsl(244, 38%, 16%); /* Card background */
+  --softViolet: hsl(277, 64%, 61%); /* Accent */
+  /* Neutral */
+  --white: hsl(0, 0%, 100%); /* main heading, stats */
+  --slightlyTransparentWhite: hsla(0, 0%, 100%, 0.75); /* main paragraph */
+  --slightlyTransparentWhite: hsla(0, 0%, 100%, 0.6); /* stat headings */
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background-color: var(--veryDarkBlue);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+}
+h1 {
+  font-size: 2.3em;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+.contenedor {
+  max-width: 1110px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 2em;
+  color: var(--slightlyTransparentWhite);
+}
+.section1 {
+  background-color: var(--darkDesaturatedBlue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4em 6.5em 4em 5em;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.insights {
+  color: var(--softViolet);
+}
+
+.lista {
+  font-weight: 200;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.75em;
+  letter-spacing: 0.2em;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--slightlyTransparentWhite);
+  padding: 4em 3em 0 0;
+}
+h3 {
+  font-size: 2.2em;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-bottom: 0.3em;
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+}
+.section2 {
+  background-image: url(../images/image-header-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(82, 2, 132, 0.586);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 1.5em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .contenedor {
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section1 {
+    max-width: 330px;
+    display: flex;
+    order: 2;
+    padding: 2.2em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .section2 {
+    background-image: url(../images/image-header-mobile.jpg);
+    max-width: 330px;
+    display: flex;
+    order: 1;
+    flex-direction: column;
+    justify-content: center;
+    background-size: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .section2::before {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .lista {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin-top: 3em;
+  }
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 0.6em;
+  }
+  h2 {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  h3 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.3em;
+  }
+
+  .attribution {
+    color: var(--white);
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+}
